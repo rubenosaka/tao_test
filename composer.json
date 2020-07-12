@@ -1,0 +1,14 @@
+{
+    "name": "ruben/tao_test",
+    "description": "Technical Exercice for Tao by Ruben Gonzalez",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ruben",
+            "email": "rubenisobar@gmail.com.com"
+        }
+    ],
+    "require-dev": {
+        "scssphp/scssphp": "1.1.1"    
+    }
+}
