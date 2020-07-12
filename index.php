@@ -25,7 +25,10 @@
             <div class="col-sm-12">
                 <div id="tao-users-cards">
                     <!-- We load the default data, in this case, USERS -->
-                    <?php userList($users = dataFromCsv(), -1); ?>
+                    <?php
+                        $list = new DataRequests; 
+                        userList($users = $list->dataFromCsv(), -1); 
+                    ?>
                 </div>                
             </div>            
         </div>       

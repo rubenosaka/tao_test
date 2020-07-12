@@ -7,6 +7,11 @@
         Date: 07/12/2020
         Version: 1.0
 
+        PHP Without external libraries or frameworks
+        Composer for Scssphp Package to compile Sass to css
+
+        Bootstrap for Responsive Design
+
     */
 
     // Init Config
@@ -30,7 +35,7 @@
 
                 NOTE: This code is here beacuse it's the only package installed
 
-          
+            
             
             require_once 'vendor/autoload.php';
 
@@ -45,10 +50,10 @@
 
             file_put_contents('Assets/css/styles.css', $content);
 
-            */
+            */ 
 
         //Data Requests Functions
         include_once('requests/index.php');
 
-        //Users Custom Funcions
+        //Users Custom Functions
         include_once('users/index.php');
