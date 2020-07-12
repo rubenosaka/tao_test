@@ -7,20 +7,26 @@
 
 function getOutput(type, id = null, url = "src/users/user-ajax.php", event) {
 
-  event.preventDefault();
-  var container = document.getElementById('tao-users-cards');
-  url = url+'?type='+type;
-  if(id){
-    url = url+'&id='+id;
-  }
-  //Loader/Spinner until retrieve the user list
-  container.innerHTML = '<div class="text-center mt-5"><div class="spinner-border" style="width: 5rem; height: 5rem;" role="status"><span class="sr-only">Loading...</span></div></div>';
-  getRequest(
-       url, // URL for the PHP file
-       drawOutput,  // Everything goes right
-       drawError    // Something goes wrong
-  );
-  return false;
+    event.preventDefault();
+    limit = -1;
+    var limit_select = document.getElementById("select_limit");
+    limit = limit_select.options[limit_select.selectedIndex].value;
+
+    console.log(limit);
+
+    var container = document.getElementById('tao-users-cards');
+    url = url+'?limit='+limit+'&type='+type;
+    if(id){
+        url = url+'&id='+id;
+    }
+    //Loader/Spinner until retrieve the user list
+    container.innerHTML = '<div class="text-center mt-5"><div class="spinner-border" style="width: 5rem; height: 5rem;" role="status"><span class="sr-only">Loading...</span></div></div>';
+    getRequest(
+        url, // URL for the PHP file
+        drawOutput,  // Everything goes right
+        drawError    // Something goes wrong
+    );
+    return false;
 }  
 // error message
 function drawError() {

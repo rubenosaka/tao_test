@@ -7,7 +7,7 @@
         $cols = Bootstrap colums for each card
 
     */
-    function userProfile($user, $limit = -1, $cols = 'col-lg-12'){   
+    function userProfile($user,  $cols = 'col-lg-12'){   
       
         if($user){            
         
